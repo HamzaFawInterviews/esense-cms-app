@@ -1,10 +1,10 @@
-<app-search-control-header (searchEvent)="searchItems($event)" (actionEvent)="showEditDialog()" />
-<div *ngFor="let entity of entities$ | async">
-    <app-item-tile [title]="entity.name" (editEvent)="onEditItem(entity)"
+<app-search-control-header (searchEvent)="searchItems($event)" (actionEvent)="onAddItem()" />
+<div *ngFor="let entity of entities$ | async; trackBy: trackById">
+    <app-item-tile [title]="entity.name" (editEvent)="onEditItem(entity)" 
         (deleteEvent)="onDeleteItem(entity.id!) "></app-item-tile>
 </div>
 
 <app-custom-dialog header="إضافة الإسم" [visible]="showEditEntityDialog" (visibleChange)="showEditEntityDialog = $event"
-     (saveAction)="editEntity()"(addDialogToggle)="showEditDialog()">
+     (saveAction)="saveEntity()">
     <app-edit-entity-form [entity]="selectedEntity"></app-edit-entity-form>
 </app-custom-dialog>

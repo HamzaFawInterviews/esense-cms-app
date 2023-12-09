@@ -9,14 +9,12 @@ import { Entity } from '../../../../../core/models/entity.model';
   styleUrl: './edit-entity-form.component.scss'
 })
 export class EditEntityFormComponent {
-  @Input() entity?: Entity;
+  @Input() entity?: Entity | null;
 
   entityForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private entityService: EntityService, private ref: ChangeDetectorRef) { }
-  ngAfterViewInit(): void {
-
-  }
+  
   ngOnInit(): void {
     this.initForm();
   }
@@ -29,7 +27,6 @@ export class EditEntityFormComponent {
   }
 
   onSubmit(): void {
-
     if (this.entityForm.valid) {
       if (this.entity?.id) {
         this.entityService.editEntity({
@@ -45,11 +42,6 @@ export class EditEntityFormComponent {
       }
 
     }
-  }
-
-  resetForm() {
-    this.ref.detectChanges();
-    this.entityForm.reset();
   }
 
 }
