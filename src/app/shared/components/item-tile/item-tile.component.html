@@ -1,0 +1,18 @@
+<div class="item-tile">
+  <h3>{{ title }}</h3>
+
+  <div class="buttons-container">
+    <app-custom-transparent-button id="btn"(action)="onEdit()">
+      <i id="edit-btn-icon" class="fas fa-pencil-alt"></i>
+      <span id="edit-btn-title">تعديل</span>
+    </app-custom-transparent-button>
+
+    <app-custom-transparent-button id="btn" (action)="onDelete()">
+      <i id="del-btn-icon" class="fas fa-trash-alt"></i>
+      <span id="del-btn-title">حذف</span>
+    </app-custom-transparent-button>
+
+  </div>
+
+  <div class="separator"></div>
+</div>

@@ -1,0 +1,12 @@
+<div class="custom-dialog-overlay" *ngIf="visible">
+    <div class="custom-dialog">
+      <div class="header">{{ header }}</div>
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+      <div class="footer">
+        <button id="submit-btn" (click)="onSave()">حفظ</button>
+        <button id="close-btn" (click)="onClose()">إلغاء</button>
+      </div>
+    </div>
+  </div>

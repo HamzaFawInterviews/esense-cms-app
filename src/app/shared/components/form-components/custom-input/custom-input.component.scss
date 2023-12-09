@@ -1,0 +1,29 @@
+/* custom-input.component.css */
+// .custom-input {
+//   // margin: 2px;
+
+// }
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333; /* Label color */
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd; /* Input border color */
+  border-radius: 4px;
+  outline: none;
+}
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: #8e8d8d;
+}
+
+input:focus {
+  border-color: #007bff; /* Input border color on focus */
+}

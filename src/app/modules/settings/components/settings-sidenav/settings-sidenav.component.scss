@@ -1,0 +1,48 @@
+.sidenav {
+  width: 230px;
+  height: 100vh;
+  background-color: #f7f7f7;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 6px -2px black;
+  margin: 0.1rem;
+
+  #title {
+    padding: 0.6rem;
+  }
+
+  .nav-items-list {
+    height: auto;
+    overflow-y: scroll;
+    flex-grow: 1;
+
+    #nav-item {
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      position: relative;
+      cursor: pointer;
+
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: grey;
+      &.active {
+        background-color: #d4e3f5;
+      }
+      p {
+        padding: 10px;
+      }
+
+      &.active::after {
+        content: "";
+        position: absolute;
+        right: 0px; /* Adjust the position as needed */
+        top: 0;
+        bottom: 0;
+        width: 4px; /* Adjust the line thickness as needed */
+        background-color: #428fed;
+      }
+    }
+  }
+}

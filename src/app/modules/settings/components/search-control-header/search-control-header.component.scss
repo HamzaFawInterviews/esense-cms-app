@@ -1,0 +1,18 @@
+@import "../../../../../_variables.scss";
+
+.search-control-panel {
+  background-color: #e4f6ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+}
+#btn-title {
+  font-size: 20px;
+}
+
+#btn-icon {
+  color: $primary-color;
+  font-size: 20px;
+  margin: 0px 8px;
+}

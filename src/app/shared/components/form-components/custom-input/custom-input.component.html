@@ -1,0 +1,8 @@
+<div class="custom-input" [ngClass]="{'has-error': required && !value}">
+  <ng-container *ngIf="label">
+    <label>{{ label }}</label>
+  </ng-container>
+  <input type="text" [value]="value" (input)="onInputChange($event)" [placeholder]="placeholder"
+    [disabled]="isDisabled" />
+  <div *ngIf="required && !value" class="error-message">الحقل مطلوب</div>
+</div>

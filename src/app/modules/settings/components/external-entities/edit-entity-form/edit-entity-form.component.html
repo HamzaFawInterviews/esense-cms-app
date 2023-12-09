@@ -1,0 +1,16 @@
+<form [formGroup]="entityForm" (ngSubmit)="onSubmit()">
+    <div class="custom-input">
+        <label for="title">الإسم</label>
+        <input type="text" id="title" formControlName="title" placeholder="أكتب الإسم أو الرقم" />
+        <div *ngIf="entityForm.get('title')?.hasError('required') && entityForm.get('title')?.dirty"
+            class="error-message">
+            الإسم مطلوب
+        </div>
+    </div>
+
+    <div class="custom-input">
+        <label for="description">التفاصيل:</label>
+        <input id="description" formControlName="description" placeholder="التفاصيل" />
+
+    </div>
+</form>

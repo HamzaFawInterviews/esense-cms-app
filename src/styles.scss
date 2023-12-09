@@ -1,0 +1,78 @@
+// Import variable file
+@import '_variables.scss';
+@import '@fortawesome/fontawesome-free/css/all.css';
+// Reset default margin and padding for all elements
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  src: url('assets/fonts/Almarai/Almarai-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  src: url('assets/fonts/Almarai/Almarai-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  src: url('assets/fonts/Almarai/Almarai-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* Numeric value for extra bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  src: url('assets/fonts/Almarai/Almarai-Light.ttf') format('truetype');
+  font-weight: 300; /* Numeric value for light */
+  font-style: normal;
+}
+
+// Set a base font size and color
+body {
+  font-family: 'Almarai';
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+// Set a maximum width for the content
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Define a primary button style
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+// Apply responsive styling for smaller screens
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
